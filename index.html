@@ -15,10 +15,7 @@
     <!-- Hidden tracking fields -->
     <input type="hidden" id="00Nbh000003Wdis" name="00Nbh000003Wdis" value="1" /> <!-- Lead via Website (auto checked) -->
 
-  <!-- <input type="hidden" name="debug" value="1">
-<input type="hidden" name="debugEmail" value="gian.gomes@leonardo-hotels.com"> -->
     <!-- Core Lead fields -->
-    
     <label for="first_name">First Name*</label><br>
     <input id="first_name" name="first_name" maxlength="40" type="text" required><br><br>
 
@@ -65,10 +62,9 @@
     <label for="travelling_employees">Amount of Travelling Employees</label><br>
     <input id="travelling_employees" name="00N20000001Eprg" type="number" min="0" step="1"><br><br>
 
-    <label for="travel_volume">Estimated Yearly Travel Volume (€)</label><br>
-    <input id="travel_volume" name="travel_volume__c" type="text"><br><br>
+    <!-- Removed Estimated Yearly Travel Volume -->
 
-    <label for="rooms_potential">Rooms Potential</label><br>
+    <label for="rooms_potential">Potential Room Nights</label><br>
     <select id="rooms_potential" name="00N20000001Ed3L">
       <option value="">--None--</option>
       <option value="<100"><100</option>
@@ -77,8 +73,8 @@
       <option value=">500">>500</option>
     </select><br><br>
 
-    <label for="description">Description</label><br>
-    <textarea id="description" name="description" rows="3" cols="40"></textarea><br><br>
+    <label for="description">Travel Destination(s)*</label><br>
+    <textarea id="description" name="description" rows="3" cols="40" required></textarea><br><br>
 
     <!-- Newsletter visible checkbox -->
     <label for="newsletter">Subscribe to Business Newsletter</label>
