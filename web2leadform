@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Web-to-Lead Test Form</title>
+</head>
+<body>
+<h2>Leonardo Hotels – Corporate Contact Test Form</h2>
+
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+  <input type="hidden" name="oid" value="00DXXXXXXXXXXXXXXX">
+  <input type="hidden" name="retURL" value="https://www.leonardo-hotels.com/thank-you">
+  <input type="hidden" name="lead_source" value="Corporate Contact Form">
+  <input type="hidden" name="lead_via_website__c" value="1">
+
+  <label>Company*</label><br>
+  <input type="text" name="company" maxlength="255" required><br><br>
+
+  <label>Amount of travelling employees (only numbers)</label><br>
+  <input type="number" name="numberofemployees" min="0" step="1"><br><br>
+
+  <label>Street & Number*</label><br>
+  <input type="text" name="street" maxlength="255" required><br><br>
+
+  <label>City*</label><br>
+  <input type="text" name="city" maxlength="100" required><br><br>
+
+  <label>Zip*</label><br>
+  <input type="text" name="postalcode" maxlength="20" required><br><br>
+
+  <label>Country*</label><br>
+  <input type="text" name="country" maxlength="100" required><br><br>
+
+  <label>Estimated yearly travel volume*</label><br>
+  <input type="text" name="rooms_potential__c" maxlength="100"><br><br>
+
+  <label>Travel destination / Favorite hotel*</label><br>
+  <input type="text" name="key_destinations__c" maxlength="255"><br><br>
+
+  <label>Additional Information</label><br>
+  <textarea name="description" rows="4" cols="40"></textarea><br><br>
+
+  <label>
+    <input type="checkbox" name="newsletter__c" value="1">
+    I am interested in the business newsletter
+  </label><br><br>
+
+  <label>
+    <input type="checkbox" name="privacy_consent__c" value="1" required>
+    I have read and agree to the privacy policy
+  </label><br><br>
+
+  <input type="submit" name="submit" value="Submit">
+</form>
+</body>
+</html>
