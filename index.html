@@ -8,11 +8,26 @@
 <h2>Leonardo Hotels – Corporate Contact Test Form</h2>
 
 <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+  <!-- Replace with your actual Salesforce Org ID -->
   <input type="hidden" name="oid" value="00DXXXXXXXXXXXXXXX">
   <input type="hidden" name="retURL" value="https://www.leonardo-hotels.com/thank-you">
   <input type="hidden" name="lead_source" value="Corporate Contact Form">
   <input type="hidden" name="lead_via_website__c" value="1">
 
+  <!-- Basic Lead Identity Fields -->
+  <label>First Name*</label><br>
+  <input type="text" name="first_name" maxlength="40" required><br><br>
+
+  <label>Last Name*</label><br>
+  <input type="text" name="last_name" maxlength="80" required><br><br>
+
+  <label>Email*</label><br>
+  <input type="email" name="email" maxlength="100" required><br><br>
+
+  <label>Phone</label><br>
+  <input type="tel" name="phone" maxlength="40"><br><br>
+
+  <!-- Company and Business Info -->
   <label>Company*</label><br>
   <input type="text" name="company" maxlength="255" required><br><br>
 
