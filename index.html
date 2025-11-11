@@ -7,59 +7,85 @@
 <body>
   <h2>Leonardo Hotels – Corporate Contact Test Form (Sandbox)</h2>
 
-  <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dbh0000022wLJ" method="POST">
-
+  <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+    <!-- Sandbox Org ID -->
     <input type="hidden" name="oid" value="00Dbh0000022wLJ">
     <input type="hidden" name="retURL" value="https://www.leonardo-hotels.com/thank-you">
-    <input type="hidden" name="lead_source" value="Corporate Contact Form">
 
-    <label>First Name*</label><br>
+    <!-- Hidden tracking fields -->
+    <input type="hidden" id="00Nbh000003Wdis" name="00Nbh000003Wdis" value="1" /> <!-- Lead via Website (auto checked) -->
+
+    <!-- Optional debug mode for testing -->
+    <!--
+    <input type="hidden" name="debug" value="1">
+    <input type="hidden" name="debugEmail" value="gian.gomes@leonardo-hotels.com">
+    -->
+
+    <!-- Core Lead fields -->
+    <label for="first_name">First Name*</label><br>
     <input id="first_name" name="first_name" maxlength="40" type="text" required><br><br>
 
-    <label>Last Name*</label><br>
+    <label for="last_name">Last Name*</label><br>
     <input id="last_name" name="last_name" maxlength="80" type="text" required><br><br>
 
-    <label>Email*</label><br>
-    <input id="email" name="email" maxlength="80" type="email" required><br><br>
+    <label for="company">Company*</label><br>
+    <input id="company" name="company" maxlength="255" type="text" required><br><br>
 
-    <label>Phone</label><br>
+    <label for="title">Title</label><br>
+    <input id="title" name="title" maxlength="80" type="text"><br><br>
+
+    <label for="email">Email*</label><br>
+    <input id="email" name="email" maxlength="100" type="email" required><br><br>
+
+    <label for="phone">Phone</label><br>
     <input id="phone" name="phone" maxlength="40" type="tel"><br><br>
 
-    <label>Company*</label><br>
-    <input id="company" name="company" maxlength="40" type="text" required><br><br>
+    <!-- Address -->
+    <label for="street">Street</label><br>
+    <textarea id="street" name="street" rows="2" cols="40"></textarea><br><br>
 
-    <label>Street</label><br>
-    <textarea id="street" name="street"></textarea><br><br>
-
-    <label>City*</label><br>
+    <label for="city">City*</label><br>
     <input id="city" name="city" maxlength="40" type="text" required><br><br>
 
-    <label>Country*</label><br>
+    <label for="country_code">Country*</label><br>
     <select id="country_code" name="country_code" required>
       <option value="">--Select Country--</option>
       <option value="DE">Germany</option>
       <option value="AT">Austria</option>
       <option value="CH">Switzerland</option>
       <option value="NL">Netherlands</option>
-      <option value="BE">Belgium</option>
-      <option value="FR">France</option>
+      <option value="PL">Poland</option>
       <option value="GB">United Kingdom</option>
-      <option value="US">United States</option>
+      <option value="FR">France</option>
+      <option value="IT">Italy</option>
       <option value="ES">Spain</option>
-      <option value="DK">Denmark</option>
     </select><br><br>
 
-    <label>ZIP P.O. Box</label><br>
-    <input id="00N20000001EciM" name="00N20000001EciM" maxlength="25" type="text"><br><br>
+    <label for="zip">ZIP / P.O. Box</label><br>
+    <input id="zip" name="zip" maxlength="20" type="text"><br><br>
 
-    <label>No. of Employees</label><br>
-    <input id="00N20000001Eprg" name="00N20000001Eprg" maxlength="20" type="number"><br><br>
+    <!-- Business-specific fields -->
+    <label for="travelling_employees">Amount of Travelling Employees</label><br>
+    <input id="travelling_employees" name="00N20000001Eprg" type="number" min="0" step="1"><br><br>
 
-    <label>Description</label><br>
-    <textarea id="description" name="description"></textarea><br><br>
+    <label for="travel_volume">Estimated Yearly Travel Volume (€)</label><br>
+    <input id="travel_volume" name="travel_volume__c" type="text"><br><br>
 
-    <label><input id="00Nbh000003Wdis" name="00Nbh000003Wdis" type="checkbox" value="1"> Lead via Website</label><br>
-    <label><input id="00N20000001Fu6V" name="00N20000001Fu6V" type="checkbox" value="1"> Subscribe to Business Newsletter</label><br><br>
+    <label for="rooms_potential">Rooms Potential</label><br>
+    <select id="rooms_potential" name="00N20000001Ed3L">
+      <option value="">--None--</option>
+      <option value="<100"><100</option>
+      <option value="100 to 250">100 to 250</option>
+      <option value="250 to 500">250 to 500</option>
+      <option value=">500">>500</option>
+    </select><br><br>
+
+    <label for="description">Description</label><br>
+    <textarea id="description" name="description" rows="3" cols="40"></textarea><br><br>
+
+    <!-- Newsletter visible checkbox -->
+    <label for="newsletter">Subscribe to Business Newsletter</label>
+    <input id="newsletter" name="00N20000001Fu6V" type="checkbox" value="1"><br><br>
 
     <input type="submit" value="Submit">
   </form>
